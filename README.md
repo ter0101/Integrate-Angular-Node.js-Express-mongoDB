@@ -1,3 +1,12 @@
+## Installation
+
+1.Node.js
+
+2.npm cli(`npm mongoose` `npm express` `npm body-parser` )
+
+3.angular cli
+
+
 # Integradte
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
