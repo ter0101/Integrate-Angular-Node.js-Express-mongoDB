@@ -6,14 +6,15 @@ const mongodb = require('mongoose');
 //set up express app
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'dist/Integradte')));
 
 //connect mongodb
 mongodb.connect('mongodb://localhost/library');
 mongodb.Promise = global.Promise;
 
 //initialize routes
-app.use('/api', require('./server/api.js'));
+app.use('/api', require('./server_api/api.js'));
 app.use('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
